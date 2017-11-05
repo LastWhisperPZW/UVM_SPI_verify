@@ -9,14 +9,19 @@ class spi_monitor extends uvm_monitor;
 	
 	virtual function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-		if(!uvm_config_db#(virtual spi_if)::get(this,"","vif"),vif)
+		if(!uvm_config_db#(virtual spi_if)::get(this,"","vif",vif))
 			`uvm_fatal("spi_monitor","virtual interface must set for vif!!")
 	endfunction
 	
-	task my_monitor::main_phase(uvm_phase phase);
-		my_transaction tr;
+	extern virtual task main_phase(uvm_phase phase);
+	
+endclass
+	
+	
+	
+	task spi_monitor::main_phase(uvm_phase phase);
+		spi_transaction tr;
 		while(1) begin;
 		end
 	endtask
 	
-endclass

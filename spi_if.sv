@@ -2,13 +2,13 @@ interface spi_if(
 				input wb_clk_i,
 				input wb_rst_i
 				);
-	input [3:0] wb_sel;
-	input [31:0] wb_dat_i;
-	input wb_stb_i;
-	input miso_pad_i;
-	input [4:0] wb_adr_i;
-	input wb_we_i;
-	input wb_cyc_i;
+	logic [3:0] wb_sel;
+	logic [31:0] wb_dat_i;
+	logic wb_stb_i;
+	logic miso_pad_i;
+	logic [4:0] wb_adr_i;
+	logic wb_we_i;
+	logic wb_cyc_i;
 	logic [31:0] wb_dat_o;
 	logic [7:0]  ss_pad_o;
 	logic wb_int_o;

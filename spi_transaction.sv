@@ -1,4 +1,9 @@
-class spi_transaction extend uvm_sequence_item;
+`ifndef SPI_TRANSACTION__SV
+`define SPI_TRANSACTION__SV
+
+class spi_transaction extends uvm_sequence_item;
 
 
 endclass
+
+`endif
