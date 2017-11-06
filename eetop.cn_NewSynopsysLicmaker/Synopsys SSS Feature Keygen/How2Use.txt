@@ -1,0 +1,22 @@
+How to use:
+
+1. Use EFA LicGen make your own license and save as synopsys.dat
+
+
+2. Use modified sssverify.exe check synopsys.dat:
+   sssverify synopsys.dat
+   * You will get the SECRET DATA infomation
+
+3. Run KGen.exe
+   * Input the same HOSTID as synopsys.dat into the HOSTID text 
+     window
+   * Input the correct SECRET DATA from step 2, into the SECRET 
+     DATA text window
+   * Generate the license.dat
+   * Copy the SSS FEATURE line of license.dat into synopsys.dat
+
+Enjoy!
+
+*** For lazy guys:
+Use my Synopsys.src replace the original one(under packs dir) 
+of the EFA LicGen, generate your valid license.
